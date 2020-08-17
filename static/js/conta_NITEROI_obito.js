@@ -1,6 +1,6 @@
 
         $(function(){
-          $.getJSON("https://raw.githubusercontent.com/lfkopp/dash_covid_v2/master/static/data/conta_RJ.json",
+          $.getJSON("https://raw.githubusercontent.com/lfkopp/dash_covid_v2/master/static/data/conta_NITEROI_obito.json",
            function(data2){  
             var data = [];
             $.each( data2['diario'], function( key, val ) {
@@ -10,7 +10,7 @@
     
     const dataSource = {
       chart: {         exportEnabled:1,
-        caption: "Numero de Casos no Estado do RJ",
+        caption: "Numero de Óbitos no Estado do RJ",
         yaxisname: "Fator R0",
         anchorradius: "5",
         plottooltext: "Fator R0 na $label é <b>$dataValue</b>",
@@ -18,7 +18,6 @@
         showvalues: "0",
         numbersuffix: " ",
         theme: "fusion",
-        dateformat: "mm/dd/yyyy",
         anchorbgcolor: "#72D7B2",
         palettecolors: "#72D7B2",
         yAxisMaxValue: "2.5",
@@ -44,7 +43,7 @@
     FusionCharts.ready(function() {
       var myChart = new FusionCharts({
         type: "splinearea",
-        renderAt: "conta_rj",
+        renderAt: "conta_niteroi_obito",
         width: '900',
           height: '370',
     

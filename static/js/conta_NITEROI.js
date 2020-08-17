@@ -1,6 +1,6 @@
 
         $(function(){
-          $.getJSON("https://raw.githubusercontent.com/lfkopp/dash_covid_v2/master/static/data/conta_RJ.json",
+          $.getJSON("https://raw.githubusercontent.com/lfkopp/dash_covid_v2/master/static/data/conta_NITEROI.json",
            function(data2){  
             var data = [];
             $.each( data2['diario'], function( key, val ) {
@@ -44,7 +44,7 @@
     FusionCharts.ready(function() {
       var myChart = new FusionCharts({
         type: "splinearea",
-        renderAt: "conta_rj",
+        renderAt: "conta_niteroi",
         width: '900',
           height: '370',
     
