@@ -1,6 +1,6 @@
 
         $(function(){
-            $.getJSON("https://raw.githubusercontent.com/lfkopp/dash_covid_v2/master/data/semanas.json",
+            $.getJSON("https://raw.githubusercontent.com/lfkopp/dash_covid_v2/master/static/data/semanas.json",
              function(data2){  
               var data = [];
               $.each( data2, function( key, val ) {

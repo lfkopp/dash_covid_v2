@@ -33,6 +33,8 @@ def conta(df,mun='RJ',onlyObito=False):
 # %%
 df.tail(1000).groupby('municipio')['municipio'].count().sort_values()
 # %%
+
+
 for mun in ['RJ','RIO DE JANEIRO','NITEROI','DUQUE DE CAXIAS']:
     for obito in [False,True]:
         filename = 'conta_'+mun.replace(' ','_')
@@ -41,5 +43,6 @@ for mun in ['RJ','RIO DE JANEIRO','NITEROI','DUQUE DE CAXIAS']:
         print(filename)
         df_x = conta(df,mun,obito).fillna(0)
         df_x[['7_dias','14_dias','diario']].plot()
-        df_x.to_json(filename+'.json')
+        df_x.to_json(filename+'.json', date_format='iso')
+
 # %%
