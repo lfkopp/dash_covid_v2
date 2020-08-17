@@ -99,3 +99,4 @@ FusionCharts.ready(function () {
   })();
 
 
+console.log(valor)
