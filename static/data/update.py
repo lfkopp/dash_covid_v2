@@ -43,6 +43,9 @@ for mun in ['RJ','RIO DE JANEIRO','NITEROI','DUQUE DE CAXIAS']:
         print(filename)
         df_x = conta(df,mun,obito).fillna(0)
         df_x[['7_dias','14_dias','diario']].plot()
-        df_x.to_json(filename+'.json', date_format='iso')
+        df_x = df_x.reset_index()
+        df_x['dataInicioSintomas'] =  df_x['dataInicioSintomas'].apply(str)
+        df_x.set_index('dataInicioSintomas', inplace=True)
+        df_x.to_json(filename+'.json')
 
-# %%
+
