@@ -18,7 +18,6 @@
         showvalues: "0",
         numbersuffix: " ",
         theme: "fusion",
-        dateformat: "mm/dd/yyyy",
         anchorbgcolor: "#72D7B2",
         palettecolors: "#72D7B2",
         yAxisMaxValue: "2.5",
